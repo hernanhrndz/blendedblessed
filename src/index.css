@@ -11,3 +11,216 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  /* colors */
+  --clr-base-0: hsl(0, 0%, 100%);
+
+  /* accents */
+  --clr-black-500: hsl(0, 0%, 0%);
+  --clr-gray-500: hsl(0, 0%, 90%);
+
+  /* font */
+  --ff-primary: 'Roboto',
+    sans-serif;
+
+  /* font weights */
+  --fw-regular: 400;
+  --fw-medium-bold: 500;
+  --fw-bold: 700;
+
+  /* font sizes */
+  --fs-primary: 16px;
+  --fs-secondary-lg: 36px;
+  --fs-secondary-sm: 14px;
+  --fs-tercerary: 21px;
+
+  /* space padding */
+  --size-100: .1rem;
+  --size-200: .25rem;
+  --size-300: .5rem;
+  --size-400: .75rem;
+  --size-500: 1rem;
+  --size-600: 1.5rem;
+  --size-700: 2rem;
+  --size-800: 3rem;
+  --size-900: 4rem;
+}
+
+
+/* a more-intuitive box-sizing model. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--fs-primary);
+  font-family: var(--ff-primary);
+  color: var(--ff-black-500)
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+/* not implemented yet */
+/* .button {
+  display: inline-flex;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 100vmax;
+  padding: 1.2em 2.5em;
+  font-weight: var(--fw-medium-bold);
+  font-size: var(--fs-primary);
+  line-height: 1;
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-red-500);
+  box-shadow: 0 1em 1em -1em var(--clr-red-700);
+} 
+
+.button:hover,
+.button:focus-visible {
+  color: var(--clr-neutral-500);
+  background-color: var(--clr-red-700);
+}
+*/
+
+
+/* utility classes */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.container {
+  --max-width: 1200px;
+  --padding: 1rem;
+
+  /* choose smaller between max-width or 100  */
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+/* text colors */
+.txt-clr-black {
+  color: var(--ff-black-500);
+}
+
+.txt-clr-white {
+  color: var(--clr-base-0);
+}
+
+.txt-accent-clr-gray {
+  color: var(--ff-gray-500);
+}
+
+/* backgroudn colors */
+.bg-clr-black {
+  background-color: var(--ff-black-500);
+}
+
+.bg-clr-white {
+  background-color: var(--clr-base-0);
+}
+
+.bg-accent-clr-gray {
+  background-color: var(--ff-gray-500);
+}
+
+/* font weights */
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium-bold);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+
+
+/* font sizes */
+.fs-headings {
+  font-size: var(--fs-secondary-lg);
+  line-height: 1.2;
+}
+
+.fs-regular {
+  font-size: var(--fs-primary);
+  line-height: 1.2;
+}
+
+/* spacing */
+.padding-block-500 {
+  padding-block: var(--size-500)
+}
+
+.padding-block-900 {
+  padding-block: var(--size-900)
+}
