@@ -1,0 +1,64 @@
+/* adding spacing */
+:where(.flow :not(:first-child)) {
+    /* outline: 4px solid rebeccapurple; */
+    margin-top: var(--flow-spacer, 1em);
+}
+.two-column {
+    display: grid;
+    gap: 16px;
+    /* justify-content: center */
+    align-items: center;
+}
+.first-container-styling {
+  text-align: left
+}
+.btn2-design {
+    margin: 0 10px;
+    /* padding: 14px 56px */
+}
+.swiper-container {
+    /* max-width: 100%; */
+    /* overflow: hidden; */
+    /* margin: 0 auto; */
+}
+/* .img {
+    max-width: 100%;
+    display: block;
+} */
+.bottom-divider {
+    /* font-family: Arial, sans-serif; */
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+  }
+  
+  .business-hours h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .business-hours li {
+    margin-bottom: 1.2px;
+  }
+  
+  .business-hours .day {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  .Location h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+@media (min-width: 50em) {
+    .two-column {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+    .business-hours{
+        display: grid;
+    }
+
+
+}

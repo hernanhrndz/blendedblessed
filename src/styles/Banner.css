@@ -1,0 +1,46 @@
+.banner-section{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/barbershop.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-base-0);
+    /* z-index: -1; */
+}
+.banner-content {
+  text-align: center;
+}
+
+.booking-btn {
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 10px 48px;
+  color: var(--clr-base-0);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-primary);
+  line-height: normal;
+  box-shadow: inset 0 0 0 0 transparent; /* Initially transparent */
+  transition: background-color 1s ease, border-color .8s ease; /* Add transition for background-color and border-color */
+}
+
+.booking-btn:hover,
+.booking-btn:focus {
+  background-color: black; /* Change background on hover */
+  border-color: black; /* Change border color on hover */
+}
+
+.booking-btn:hover {
+  transition-delay: 0.3s; /* Delay the hover transition */
+}
+
+.booking-btn:hover,
+.booking-btn:focus {
+  transition: background-color 0.5s ease-out, border-color 0.5s ease-out; /* Slowly transition back to original state */
+}

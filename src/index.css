@@ -1,16 +1,16 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 :root {
   /* colors */
@@ -18,9 +18,10 @@ code {
 
   /* accents */
   --clr-black-500: hsl(0, 0%, 0%);
+  --clr-gray-400: hsl(0, 0%, 80%);
   --clr-gray-500: hsl(0, 0%, 90%);
-
-  /* font */
+  --clr-gray-800:   hsl(0, 0%, 40%);
+  /* font family */
   --ff-primary: 'Roboto',
     sans-serif;
 
@@ -66,8 +67,8 @@ code {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -119,27 +120,27 @@ h6 {
 
 
 /* not implemented yet */
-/* .button {
+.button {
   display: inline-flex;
   border: 0;
   cursor: pointer;
-  text-decoration: none;
-  border-radius: 100vmax;
-  padding: 1.2em 2.5em;
+  /* text-decoration: none; */
+  border-radius: 10px;
+  padding: 1.4rem 6.5rem;
   font-weight: var(--fw-medium-bold);
   font-size: var(--fs-primary);
-  line-height: 1;
-  color: var(--clr-neutral-400);
-  background-color: var(--clr-red-500);
-  box-shadow: 0 1em 1em -1em var(--clr-red-700);
+  line-height: normal;
+  color: var(--clr-base-0);
+  background-color: var(--clr-black-500);
+  box-shadow: 0 1em 1em -1em var(--clr-black-500);
 } 
 
 .button:hover,
 .button:focus-visible {
-  color: var(--clr-neutral-500);
-  background-color: var(--clr-red-700);
+  color: var(--clr-base-0);
+  background-color: var(--clr-gray-800);
 }
-*/
+
 
 
 /* utility classes */
@@ -166,28 +167,28 @@ h6 {
 
 /* text colors */
 .txt-clr-black {
-  color: var(--ff-black-500);
+  color: var(--clr-black-500);
 }
 
 .txt-clr-white {
   color: var(--clr-base-0);
 }
 
-.txt-accent-clr-gray {
-  color: var(--ff-gray-500);
+.txt-clr-gray {
+  color: var(--clr-gray-800)
 }
 
 /* backgroudn colors */
 .bg-clr-black {
-  background-color: var(--ff-black-500);
+  background-color: var(--clr-black-500);
 }
 
 .bg-clr-white {
   background-color: var(--clr-base-0);
 }
 
-.bg-accent-clr-gray {
-  background-color: var(--ff-gray-500);
+.bg-clr-gray {
+  background-color: var(--clr-gray-500);
 }
 
 /* font weights */

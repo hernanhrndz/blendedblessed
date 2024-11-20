@@ -1,0 +1,21 @@
+/* *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+} */
+.footer-section {
+    text-align: center;
+    
+}
+.copyright {
+    /* line-height ; */
+    font-size: .8rem;
+}
+.divider {
+    /* border-top: 1px solid; */
+    /* border-bottom: 1px solid; */
+    margin: 0 10rem 0 10rem;
+}
