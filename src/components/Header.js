@@ -34,7 +34,7 @@ export const Header = () => {
                         <li> <a href="#"> Products  </a> </li>
                         <li> <a href="#"> Contact Us!  </a> </li>
                         {/* <hr className="nav-divider"></hr> */}
-                        <li className="social-links">
+                        <li className="icon-wrapper">
                             <a aria-label="Instagram" href="#" className="insta-icon"> <FaInstagram /> </a>
                             {/* <a href=""> Book Now! </a> */}
                         </li>

@@ -23,7 +23,7 @@
     /* margin: 10px 0; Adjust margin as needed */
 }
 
-
+/* Underline hover effect */
 .nav-list {
     font-size: var(--fs-primary);
     font-weight: var(--fw-medium-bold);
@@ -38,11 +38,8 @@
     color: var(--clr-base-0);
 }
 
-/* .nav-list li a:hover {
-    color: #747474;
-} */
 
-.nav-list li a::before {
+.nav-list li a:not(.insta-icon)::before {
     content: "";
     position: absolute;
     display: block;
@@ -55,52 +52,42 @@
     transition: transform 0.5s ease;
 }
 
-.nav-list li a:hover::before {
+.nav-list li a:not(.insta-icon):hover::before {
     transform: scaleX(1);
 }
 
 
-
-
-.nav-list li .insta-icon {
-    /* transform: translate(-50%, -50%) !important; */
-    /* display: inline-block; */
-    /* Ensure the link wraps around the icon */
-    /* width: 100px;                Icon width */
-    /* height: 100px;         Create a new positioning context for pseudo-element */
+/* social icon hover effect */
+/* style for circular wrapper */
+.icon-wrapper {
+    border-radius: 30%;     
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
     background-color: transparent;
-    text-align: center;
-    font-size: 25px;
-    /* line-height: 100px; */
-    /* margin: 0, 10px; */
-    display: block;
-    border-radius: 30%;
-    position: relative;
-    overflow: hidden;
-    /* border: solid 2px #4d4d4d; */
-    z-index: 2;
-
-}
-.nav-list li .insta-icon .fa {
-    position: relative;
-    color: #c50097;
-    transform: rotateY(360deg);
+    transition: backgroud-color 0.3s ease-in-out,
+                color 0.3s ease-in-out,
+                transform 0.3s ease-in-out; 
 }
 
-.nav-list li .insta-icon:before {
-    content: '';
-    position: absolute;
-    top: 100% ;
-    left: 0% ;
-    width: 100%;
-    height: 100%;
-    background-color: #e4405f;  /* Default background color for the hover effect */
-    transition: .5s;
-    z-index: 1;
-  }
-  .nav-list li .insta-icon:hover:before {
-    top: 0;
-  }
-  .nav-list li:nth-child(1) .insta-icon:before {
-    background-color:black;
-  }
+/* base style for icon */
+.insta-icon {
+    color: white;
+    font-size: 2rem;
+    transition: color 0.4s ease-in-out;
+}
+
+/* hover styles for wrapper */
+.icon-wrapper:hover {
+    color: black;
+    background-color: white;
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /*adds shadow depth*/
+}
+
+/* change icon color on hover */
+.icon-wrapper:hover .insta-icon {
+    color: black;
+}
