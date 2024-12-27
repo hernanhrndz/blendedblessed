@@ -8,12 +8,12 @@
      z-index: 9999;
 }
 
-.container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 0 16px 0;
-
+    /* color: black; */
 }
 
 .nav-divider {
@@ -22,7 +22,12 @@
     /* background-color: #ff1414; Set color of the divider */
     /* margin: 10px 0; Adjust margin as needed */
 }
-
+.logo {
+    max-width: 10%;
+    height: auto;
+    display: block;
+    padding: 0px 16px 0px 0;
+}
 /* Underline hover effect */
 .nav-list {
     font-size: var(--fs-primary);
@@ -35,7 +40,7 @@
     position: relative;
     text-decoration: none;
     white-space: nowrap;
-    color: var(--clr-base-0);
+    color: var(--clr-black-500);
 }
 
 
@@ -47,7 +52,7 @@
     height: 2px;
     bottom: -3px;
     left: 0;
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--clr-black-500);
     transform: scaleX(0);
     transition: transform 0.5s ease;
 }
@@ -56,38 +61,51 @@
     transform: scaleX(1);
 }
 
+/* Icon styling */
 
-/* social icon hover effect */
-/* style for circular wrapper */
 .icon-wrapper {
-    border-radius: 30%;     
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    transition: backgroud-color 0.3s ease-in-out,
-                color 0.3s ease-in-out,
-                transform 0.3s ease-in-out; 
+    /* position: relative;
+    z-index: 10; */
+    display: inline-flex; /* Ensures the icon and text are placed horizontally */
+    align-items: center; /* Vertically centers the icon and text */
+    justify-content: flex-start; /* Aligns items to the left */
+    background-color: transparent; /* Initial background */
+    border-radius: 30px; /* Rounded corners */
+    padding: 8px 16px; /* Adds spacing inside the wrapper */
+    width: 40px; /* Initially only wide enough for the icon */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transition on hover */
+    overflow: hidden; /* Prevents text from being visible before hover */
 }
 
-/* base style for icon */
-.insta-icon {
-    color: white;
-    font-size: 2rem;
-    transition: color 0.4s ease-in-out;
+.insta-icon-img {
+    font-size: 24px; /* Icon size */
+    color: var(--clr-black-500); /* Default icon color */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    flex-shrink: 0;
 }
 
-/* hover styles for wrapper */
+.icon-wrapper .icon-text {
+    margin-left: 8px; /* Adds space between the icon and text */
+    opacity: 0; /* Makes the text invisible initially */
+    transform: translateX(-10px); /* Positions text slightly to the left */
+    color: transparent; /* Ensures it blends into the background */
+    white-space: nowrap; /* Prevents text from wrapping */
+    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
 .icon-wrapper:hover {
-    color: black;
-    background-color: white;
-    transform: scale(1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /*adds shadow depth*/
+    width: 160px; /* Expands to fit the icon and text */
+    background-color: black; /* Changes background on hover */
 }
 
-/* change icon color on hover */
-.icon-wrapper:hover .insta-icon {
-    color: black;
+.icon-wrapper:hover .insta-icon-img {
+    transform: translateX(-5px); /* Slightly moves the icon left for emphasis */
+    color: white; /* Changes icon color to white */
 }
+
+.icon-wrapper:hover .icon-text {
+    opacity: 1; /* Makes the text visible */
+    transform: translateX(0); /* Resets the text position */
+    color: white; /* Changes text color to white */
+}
+
