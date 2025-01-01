@@ -10,7 +10,7 @@ export const Banner = () => {
                     <div className='two-column'>
                         <div className='flow banner-content'>
                             <h1 className="fw-bold fs-headings ">Blended Blessed for all your needs</h1>
-                            <button className="booking-btn"> Book Now </button>
+                            <button className="booking-btn"> Call Now! </button>
                         </div>
                     </div>
                 </div>
