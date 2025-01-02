@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { IconContext } from "react-icons";
-import "../styles/Header.css";
+import "../styles/Navbar.css";
 import logo from "../assets/mainLogo.png";
 
 import { FaInstagram } from "react-icons/fa";
 
 
-export const Header = () => {
+export const Navbar = () => {
     const [navVisible, setNavVisible] = useState(false)
 
     const toggleNavbar = () => {
@@ -18,9 +18,11 @@ export const Header = () => {
         document.body.classList.remove('no-scroll');
     };
 
+    console.log("Navbar rendered");
+
     return (
-        <header className="primary-header bg-clr-white">
-            <div className="container header-container">
+        <nav className="primary-navbar bg-clr-white">
+            <div className="container navbar-container">
                 <a href="#"><img src={logo} alt="BlendedBlessed" className="logo"/></a>
 
                 {/* <div className="nav-wrapper"> */}
@@ -48,7 +50,7 @@ export const Header = () => {
                 </button> */}
                 {/* </div> */}
             </div>
-        </header>
+        </nav>
     )
 }
-export default Header;
+export default Navbar;
