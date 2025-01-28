@@ -1,0 +1,126 @@
+body {
+  line-height: 1.7;
+}
+
+.content-grid {
+  /* --container-max-width: 60rem;
+  --min-inline-margin: 2rem;
+  display: grid;
+  grid-template-columns:
+    [full-width-start breakout-left-start] minmax(
+      1rem,
+      1fr
+    ) [content-start breakout-right-start] min(
+      100% - var(--min-inline-margin),
+      var(--container-max-width)
+    )
+    [content-end breakout-left-start] minmax(
+      1rem,
+      1fr
+    ) [full-width-end breakout-right-end]; */
+}
+
+
+.primary-header {
+  margin-block-end: 2rem;
+  padding-bottom: 1rem;
+  border-block-end: 1px solid var(--separator-color, black);
+}
+
+.primary-header__layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  /*   grid-column: content-start / full-width-end; */
+}
+
+.primary-navigation > ul {
+  list-style: none;
+  margin: 0;
+  padding: var(--navigation-padding, 1rem) 0;
+  display: flex;
+  gap: clamp(1rem, 5vi, 2.5rem);
+}
+
+.service-section {
+    display: flex;
+    justify-content: space-between; /* Space between description and price */
+    align-items: center;
+    width: 100%;
+
+}
+
+.service-name {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-regular);
+    /* flex-grow: 1; */
+}
+
+.service-price {
+    /* margin-left: auto; */
+    font-weight: var(--fw-bold);
+    text-align: right;
+    /* flex-shrink: 0;  */
+}
+.service-details {
+    /* color: gray; */
+    color: var(--txt-clr-gray);
+    width: 100%;
+}
+
+
+.service:not(:last-child):not(:has(+ [hidden])) {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid black;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border: 0;
+  padding: 0;
+}
+
+.filter-btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  background: transparent;
+  border: 0;
+  border-radius: .75rem;
+  padding: 0.25rem 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: hsl(0, 0%, 80%);
+}
+
+.filter-btn.active {
+  background: black;
+  color: white;
+  
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2);
+}
+
+  
+.service-container::view-transition-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.service::view-transition-name {
+    /* Each service can have its unique transition styling */
+    opacity: 0.5;
+}
+
+  
+  
+/* image  */
+
+
+  
+  
