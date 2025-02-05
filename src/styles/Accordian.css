@@ -1,3 +1,5 @@
+
+/* img according function */
 .accordion {
     width: 100%;
     display: flex;
@@ -16,9 +18,17 @@
     overflow: hidden;
     flex: 1;
     border-radius: 50px;
+    /* min-width: 10px; */
     opacity: 0.75;
     cursor: pointer;
     transition: flex 0.3s ease, transform 0.3s ease;
+  }
+    
+  .accordion-item:hover {
+    flex-grow: 2;
+    flex-shrink: 0;
+    z-index: 10;
+    opacity: 1;
   }
   
   .accordion-item img {
@@ -78,13 +88,6 @@
     opacity: 0;
   }
   
-  .accordion-item:hover {
-    flex: 0 1 260px;
-    scale: 1.1;
-    z-index: 10;
-    opacity: 1;
-  }
-  
   .accordion-item:hover .content {
     opacity: 1;
     visibility: visible;
@@ -94,4 +97,41 @@
     translate: -50% 0;
     opacity: 1;
     visibility: visible;
+  }
+
+  /* filter buttons */
+  .filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border: 0;
+    padding: 0;
+
+    margin-block-end: 2rem;
+    padding-bottom: 2rem;
+    /* border-block-end: 1px solid var(--separator-color, black); */
+  }
+  .filter-btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    background: transparent;
+    color: black;
+    border: 0;
+    border-radius: 10px;
+    padding: 0.25rem 1rem;
+    /* box-shadow: 0 1rem 1rem -1rem var(--clr-black-500); */
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2);
+  }
+  
+  .filter-btn:hover,
+  .filter-btn:focus {
+    background-color: hsl(0, 0%, 80%);
+  }
+  
+  .filter-btn.active {
+    background: black;
+    color: white;
+    
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2);
   }
