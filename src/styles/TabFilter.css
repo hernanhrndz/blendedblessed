@@ -2,37 +2,43 @@ body {
   line-height: 1.7;
 }
 
-.content-grid {
-  /* --container-max-width: 60rem;
-  --min-inline-margin: 2rem;
-  display: grid;
-  grid-template-columns:
-    [full-width-start breakout-left-start] minmax(
-      1rem,
-      1fr
-    ) [content-start breakout-right-start] min(
-      100% - var(--min-inline-margin),
-      var(--container-max-width)
-    )
-    [content-end breakout-left-start] minmax(
-      1rem,
-      1fr
-    ) [full-width-end breakout-right-end]; */
+.service-category {
+  width: 100%;
+  text-align: center; 
+  margin-bottom: 1.5rem;
+}
+
+.category-heading {
+  background: black;
+  color: white;
+  font-size:  clamp(1.5rem, 2vw, 1.8rem); /* Responsive font size */
+  /* font-weight: bold; */
+  padding: 0.75rem 2em;
+  border-radius: 0.5rem;
+  display: inline-block; /* Keeps the button-like appearance */
+  text-align: center;
+  margin-bottom: .8rem; 
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2);
+
+}
+
+
+.service-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Space between categories */
+}
+
+.service-category .service {
+  text-align: left;
+  margin: 0 auto; 
 }
 
 
 .primary-header {
-  margin-block-end: 2rem;
-  padding-bottom: 1rem;
-  border-block-end: 1px solid var(--separator-color, black);
-}
-
-.primary-header__layout {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  /*   grid-column: content-start / full-width-end; */
 }
 
 .primary-navigation > ul {
@@ -53,7 +59,7 @@ body {
 
 .service-name {
     font-weight: var(--fw-bold);
-    font-size: var(--fs-regular);
+    /* font-size: clamp(1.125rem, 1.5vw, 1.5rem); */
     /* flex-grow: 1; */
 }
 
@@ -71,56 +77,26 @@ body {
 
 
 .service:not(:last-child):not(:has(+ [hidden])) {
-  padding-bottom: 2rem;
+  padding-bottom: 1.8rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid black;
 }
 
-.filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  border: 0;
-  padding: 0;
-}
-
-.filter-btn {
-  cursor: pointer;
-  text-transform: uppercase;
-  background: transparent;
-  border: 0;
-  border-radius: .75rem;
-  padding: 0.25rem 1rem;
-}
-
-.filter-btn:hover,
-.filter-btn:focus {
-  background-color: hsl(0, 0%, 80%);
-}
-
-.filter-btn.active {
-  background: black;
-  color: white;
   
-  box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2);
-}
-
-  
-.service-container::view-transition-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.service::view-transition-name {
-    /* Each service can have its unique transition styling */
-    opacity: 0.5;
-}
-
-  
-  
-/* image  */
-
-
-  
-  
+/* .content-grid {
+  --container-max-width: 60rem;
+  --min-inline-margin: 2rem;
+  display: grid;
+  grid-template-columns:
+    [full-width-start breakout-left-start] minmax(
+      1rem,
+      1fr
+    ) [content-start breakout-right-start] min(
+      100% - var(--min-inline-margin),
+      var(--container-max-width)
+    )
+    [content-end breakout-left-start] minmax(
+      1rem,
+      1fr
+    ) [full-width-end breakout-right-end];
+} */
