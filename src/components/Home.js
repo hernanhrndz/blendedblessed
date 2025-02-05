@@ -2,6 +2,8 @@ import React, { } from 'react';
 import "../styles/Home.css";
 import { ImgCarousel } from './ImgCarousel';
 import { Accordian } from './Accordian';
+import { TabFilter } from './TabFilter';
+import Scissors from "./Scissors";
 
 import serviceImg from "../assets/services-img.jpeg";
 
@@ -12,31 +14,37 @@ export const Home = () => {
             <section className="padding-block-900">
                 <div className="container">
                     <div className="two-column | first-container-styling">
-                        <div className="flow">
-                            <h1 className="fw-medium fs-headings txt-accent-clr-black services-header">Services</h1>
+                        <div className="flow | left-section-content">
+                            <h1 className="fw-bold txt-accent-clr-black services-header">Services</h1>
                             <p>We offer a wide range of styles for both male and female clients</p>
-                            <button className="button" >View Services</button>
-                            <button className="button btn2-design">Book Now!</button>
+                            {/* <button className="button" >View Services</button> */}
+                            <button className="button btn2-design">Call Now!</button>
+
+                            {/* Scissors animation */}
+                            <div className="scissors-animation-container">
+                                <Scissors />
+                            </div>
 
                         </div>
 
                         <div>
-                            <img src={serviceImg} alt="startingImg" />
+                            <TabFilter />
+                            {/* <img src={place} alt="startingImg" /> */}
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* mid page */}
-            <section className="padding-block-900 bg-clr-gray">
+            <section className="padding-block-900">
                 <div className="container">
-                    <div className="two-column">
+                    <div className="two-column-mid">
+                        <div className="flow">
+                            <h1 className="fw-medium fs-headings txt-accent-clr-black product-heading">Products</h1>
+                            <p>We offer producst for hair styling</p>
+                        </div>
                         <div>
                             <Accordian/>
-                        </div>
-                        <div className="flow">
-                            <h1 className="fw-medium fs-headings txt-accent-clr-black">Products</h1>
-                            <p>We offer producst for hair styling</p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +63,7 @@ export const Home = () => {
             </section>
 
             {/* bottom page */}
-            <section className="padding-block-500 bg-clr-gray">
+            <section className="padding-block-500">
                 <div className="container | bottom-divider" >
             
                         <div className="business-hours">
